@@ -22,7 +22,7 @@ class CreateRedsysClient
             throw RedsysConfigError::missingOption('Key');
         }
 
-        $customBaseUrl = config('redsys.tpv.url', null);
+        $customBaseUrl = config('redsys.tpv.customBaseUrl', null);
         if (config('redsys.environment') === 'local') {
             $environment = Environment::Custom;
             $customBaseUrl = url(config('redsys.routes_prefix').'/localGateway');
